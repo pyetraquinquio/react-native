@@ -20,16 +20,19 @@ const styles = StyleSheet.create({
   },
 
   nome: {
-    fontSize: 15,
+    fontSize: 17,
     fontWeight: "bold",
+    padding: 5,
   },
 
   preço: {
-    fontSize: 13,
+    fontSize: 15,
     color: "red",
+    padding: 8,
   },
 
   descriçao: {
     fontSize: 13,
+    padding: 5,
   }
 })

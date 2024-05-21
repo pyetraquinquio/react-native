@@ -19,20 +19,25 @@ const styles = StyleSheet.create({
     margin: 10,
     padding: 10,
     backgroundColor: "blueviolet",
+    padding: 20,
+    alignItems: "center",
+    justifyContent: "center",
   },
 
   nome: {
-    fontSize: 15,
+    fontSize: 17,
     fontWeight: "bold",
+    padding: 5,
   },
 
   preço: {
-    fontSize: 13,
+    fontSize: 15,
     color: "red",
+    padding: 8,
   },
 
   image: {
-    width: 150,
-    height: 150,
+    width: 200,
+    height: 200,
   },
 })

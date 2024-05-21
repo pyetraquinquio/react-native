@@ -7,7 +7,7 @@ export default function CoxinhaItemComBotao() {
         <Text style={styles.nome}>Coxinha de Frango</Text>
         <Text style={styles.preço}>R$: 5,50</Text>
         <Button 
-          title= "Pressione-me"
+          title= "Adicionar"
           onPress={() => Alert.alert('Coxinha adicionada ao carrinho!')}
         />
       </View>
@@ -17,18 +17,20 @@ export default function CoxinhaItemComBotao() {
 const styles = StyleSheet.create({
   conteiner: {
     margin: 10,
-    padding: 10,
+    padding: 15,
     backgroundColor: "blueviolet",
   },
 
   nome: {
-    fontSize: 15,
+    fontSize: 17,
     fontWeight: "bold",
+    padding: 5,
   },
 
   preço: {
-    fontSize: 13,
+    fontSize: 15,
     color: "red",
+    padding: 8,
   },
 
 })

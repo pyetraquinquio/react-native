@@ -1,13 +1,13 @@
 import { StyleSheet, View, Text} from 'react-native';
-import CoxinhaItemDetalhado from './components/CoxinhaItemDetalhado';
+import CoxinhaItem from './components/CoxinhaItem';
 
 export default function App() {
   return (
     <View style={styles.container}>
 
-      <Text style={styles.text}>Lista de Salgados</Text>
+      <Text>Lista de Salgados</Text>
       
-      <CoxinhaItemDetalhado></CoxinhaItemDetalhado>
+      <CoxinhaItem></CoxinhaItem>
 
 
     </View>
@@ -21,8 +21,4 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-
-  text: {
-    fontSize: 20,
-   }
 });
