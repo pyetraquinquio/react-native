@@ -1,14 +1,18 @@
-import { StyleSheet, View, Text} from 'react-native';
-import CoxinhaItem from './components/CoxinhaItem';
+import React,{ useState } from 'react';
+import { StyleSheet, View, Text, Button} from 'react-native';
 
-export default function App() {
+export default function Contador() {
+
+  const [count, setCount]  = useState(0);
+
   return (
     <View style={styles.container}>
 
-      <Text>Lista de Salgados</Text>
-      
-      <CoxinhaItem></CoxinhaItem>
+      <Text>Você clicou {count} vezes</Text>
 
+      <Text></Text>
+      
+      <Button title="Clique Aqui" onPress={() => setCount(count + 1)} />
 
     </View>
   );
