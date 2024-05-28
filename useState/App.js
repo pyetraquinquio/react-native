@@ -5,7 +5,7 @@ export default function App() {
   return (
     <View style={styles.container}>
 
-      <Text style={styles.text}>Lista de Salgados</Text>
+      <Text>Lista de Salgados</Text>
       
       <CoxinhaItem></CoxinhaItem>
 
@@ -21,8 +21,4 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-
-  text: {
-    fontSize: 20,
-   }
 });

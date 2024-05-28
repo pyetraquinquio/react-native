@@ -7,7 +7,7 @@ export default function App() {
 
       <Text>Lista de Salgados</Text>
       
-      <CoxinhaItem></CoxinhaItem>
+      <CoxinhaItem />
 
 
     </View>

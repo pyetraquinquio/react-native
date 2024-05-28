@@ -3,17 +3,13 @@ import { View, Text, StyleSheet } from 'react-native';
 
 export default function CoxinhaItem() {
   let nome = "Coxinha de Frango"
-  let preço = 5.5
-  let desconto = preço * (10 / 100)
-  let valorfinal = preço - desconto
+  let preço = 5.2528
+  let quantidade = 20
    return (
       <View style={styles.conteiner}>
         <Text style={styles.nome}>{nome}</Text>
         <Text style={styles.preço}>{`R$: ${preço.toFixed(2)}`}</Text>
-        <Text style={styles.preço}>Porcentagem do desconto: 10%</Text>
-        <Text style={styles.desconto}>{`Valor do desconto: R$: ${desconto}`}</Text>
-        <Text style={styles.valorfinal}>{`Valor final: R$: ${valorfinal}`}</Text>
-
+        <Text style={styles.quantidade}>{`Quantidade disponível: ${quantidade}`}</Text>
       </View>
     );
   }
@@ -23,7 +19,6 @@ const styles = StyleSheet.create({
     margin: 10,
     padding: 10,
     backgroundColor: "#CCC",
-    fontSize: 20,
   },
 
   nome: {
@@ -35,11 +30,7 @@ const styles = StyleSheet.create({
     fontSize: 15,
   },
 
-  desconto: {
+  quantidade: {
     fontSize: 15,
   },
-
-  valorfinal: {
-    fontSize: 15,
-  }
 })
