@@ -1,14 +1,23 @@
-import { View, Text, StyleSheet, Pressable } from 'react-native';
+import { View, Text, StyleSheet,Pressable } from 'react-native';
 
 
 export default function CoxinhaItemEstilo6(props) {
  
    return (
+
     <Pressable onPress={props.aoClicar}>
       <View style={styles.conteiner}>
+
         <Text style={styles.nome}>{props.nome}</Text>
+
         <Text style={styles.preço}>{`R$: ${props.preço.toFixed(2)}`}</Text>
-        {props.originalPreço && props.originalPreço > props.preço && <Text style={styles.promo}>HOJE TEMOS PROMOÇÃO!!!</Text>}
+
+        <Text></Text>
+
+        {props.originalPreço && props.originalPreço > props.preço && (
+           <Text style={styles.promo}>HOJE TEMOS PROMOÇÃO!!!</Text>
+          )}
+
       </View>
       </Pressable>
     );
@@ -16,9 +25,8 @@ export default function CoxinhaItemEstilo6(props) {
 
 const styles = StyleSheet.create({
   conteiner: {
-    margin: 10,
-    padding: 10,
-    backgroundColor: "orange",
+    alignItems:"center",
+    justifyContent:"center"
   },
 
   nome: {

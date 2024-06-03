@@ -1,35 +1,25 @@
-import React, {useState} from 'react';
-import { StyleSheet, View, Text, StatusBar, TextInput} from 'react-native';
+import { useState } from 'react';
+import { StyleSheet, View, TextInput, SafeAreaView,Text } from 'react-native';
 
 export default function App() {
 
-  const [campoNome, setCampoNome] = useState(""); 
 
-  
-  
+  const [campoNome, setCampoNome] = useState("")
 
   return (
     <View style={styles.container}>
+      <SafeAreaView>
 
-      <StatusBar backgroundColor="blueviolet" barStyle="light-content"/>
+        <TextInput
+          style={styles.input}
+          placeholder='Digite seu nome'
+          placeholderTextColor='lightpink'
+          value={campoNome}
+          onChangeText={(texto) => setCampoNome(texto)} />
 
-      <TextInput
-      style={styles.input}
-      placeholder='Digite seu nome'
-      placeholderTextColor="blueviolet"
-      value={campoNome} //Define o valor atual do campo de entrada de texto como campoNome
-      onChangeText={(texto) => setCampoNome(texto)} //Atualiza o estado campoNome quando o texto do campo de entrada muda
+        <Text style={styles.text}> Numero de caracteres digitados:{campoNome.length}</Text>
 
-      />
-
-    <Text></Text>
-
-      <Text style={styles.texto}>Digitado no campo: {campoNome}</Text>
-
-      <Text style={styles.texto}>Quantidade de caracteres: {campoNome.length}</Text>
-
-      
-
+      </SafeAreaView>
     </View>
   );
 }
@@ -39,18 +29,22 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: "#e0b0ff"
+    backgroundColor: 'lightyellow'
   },
 
   texto: {
-    fontSize: 15
-  }, 
+    fontSize: 20
+  },
 
   input: {
-    padding: 8,
-    borderWidth: 2,
-    borderRadius: 10,
-    width: 220,
-    backgroundColor: "#a87bc7"
+    backgroundColor: "lightblue",
+    padding: 10,
+    width: "100%",
+    marginBottom: 20,
+    borderRadius: 5,
+  },
+
+  text: {
+    fontSize: 18
   }
 });
